@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F8F6FF">
+
+
+    <!-- ===================================================== -->
+    <!-- HEADER -->
+    <!-- ===================================================== -->
+
+    <ImageButton
+        android:id="@+id/btnBack"
+
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+
+        android:background="@android:color/transparent"
+
+        android:src="@android:drawable/ic_menu_revert"
+
+        android:contentDescription="Back"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+
+        android:text="All Staff / Teachers"
+
+        android:textColor="#17102D"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+        android:gravity="center"
+
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack" />
+
+
+    <!-- ===================================================== -->
+    <!-- SPINNER -->
+    <!-- ===================================================== -->
+
+    <Spinner
+        android:id="@+id/spinnerStaffType"
+
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="12dp"
+
+        android:background="@drawable/bg_staff_input"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ===================================================== -->
+    <!-- SEARCH -->
+    <!-- ===================================================== -->
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchStaff"
+
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="10dp"
+
+        android:queryHint="Search staff / teacher"
+
+        android:background="@drawable/bg_staff_input"
+
+        app:iconifiedByDefault="false"
+
+        app:layout_constraintTop_toBottomOf="@id/spinnerStaffType"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ===================================================== -->
+    <!-- STAFF LIST -->
+    <!-- ===================================================== -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStaff"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        android:clipToPadding="false"
+
+        android:paddingBottom="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/searchStaff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

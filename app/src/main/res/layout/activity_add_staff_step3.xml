@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F6FF">
+
+
+    <!-- ===================================================== -->
+    <!-- HEADER -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        android:paddingStart="7dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="5dp">
+
+
+        <!-- TOP BACK -->
+
+        <ImageButton
+            android:id="@+id/btnTopBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Back"/>
+
+
+        <!-- HEADER TITLE -->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="Add Staff / Teacher"
+
+            android:textColor="#5726B8"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+
+        <!-- BALANCE -->
+
+        <View
+            android:layout_width="34dp"
+            android:layout_height="34dp"/>
+
+    </LinearLayout>
+
+    <!-- ===================================================== -->
+    <!-- CONTENT -->
+    <!-- ===================================================== -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        android:fillViewport="true"
+        android:clipToPadding="false"
+
+        android:paddingBottom="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp">
+
+            <!-- ================= STEP INDICATOR ================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/step_inactive"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#777777"/>
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="2dp"
+                    android:background="#5B21B6"/>
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/step_inactive"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="#777777"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="2dp"
+                    android:background="#5B21B6"/>
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/step_active"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="2dp"
+                    android:background="#DDDDDD"/>
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/step_inactive"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="#777777"/>
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="2dp"
+                    android:background="#DDDDDD"/>
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/step_inactive"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="#777777"/>
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="2dp"
+                    android:background="#DDDDDD"/>
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/step_inactive"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="#777777"/>
+
+            </LinearLayout>
+
+
+
+            <!-- ================================================= -->
+            <!-- TITLE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+
+                android:text="Staff Type &amp; Role"
+
+                android:textColor="#201B26"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="2dp"
+
+                android:gravity="center"
+
+                android:text="Select staff category and assign responsibilities"
+
+                android:textColor="#77727E"
+                android:textSize="12sp"/>
+
+
+            <!-- ================================================= -->
+            <!-- STAFF TYPE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+
+                android:text="Staff Type *"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spStaffType"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="5dp"
+
+                android:background="@drawable/bg_staff_input"/>
+
+
+            <!-- ================================================= -->
+            <!-- ROLE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+
+                android:text="Role *"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spRole"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="5dp"
+
+                android:background="@drawable/bg_staff_input"/>
+
+
+            <!-- ================================================= -->
+            <!-- TEACHER ASSIGNMENT -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/teacherAssignmentLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="18dp"
+
+                android:orientation="vertical"
+
+                android:visibility="gone">
+
+
+                <!-- SECTION TITLE -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Teacher Assignment"
+
+                    android:textColor="#27212F"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="2dp"
+
+                    android:text="Teaching subject and class details"
+
+                    android:textColor="#77727E"
+                    android:textSize="12sp"/>
+
+
+                <!-- ================================================= -->
+                <!-- SUBJECT -->
+                <!-- ================================================= -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="14dp"
+
+                    android:text="Subject *"
+
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+
+                <EditText
+                    android:id="@+id/etSubject"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:layout_marginTop="5dp"
+
+                    android:background="@drawable/bg_staff_input"
+
+                    android:hint="Enter subject"
+
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+
+                    android:singleLine="true"
+
+                    android:inputType="textCapWords"
+
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:textSize="14sp"/>
+
+
+                <!-- ================================================= -->
+                <!-- CLASS -->
+                <!-- ================================================= -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="13dp"
+
+                    android:text="Assign Class"
+
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+
+                <EditText
+                    android:id="@+id/etAssignedClass"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:layout_marginTop="5dp"
+
+                    android:background="@drawable/bg_staff_input"
+
+                    android:hint="Example: 8th"
+
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+
+                    android:singleLine="true"
+
+                    android:inputType="textCapWords"
+
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:textSize="14sp"/>
+
+
+                <!-- ================================================= -->
+                <!-- DIVISION -->
+                <!-- ================================================= -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="13dp"
+
+                    android:text="Assign Division"
+
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+
+                <EditText
+                    android:id="@+id/etAssignedDivision"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:layout_marginTop="5dp"
+
+                    android:background="@drawable/bg_staff_input"
+
+                    android:hint="Example: A"
+
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+
+                    android:singleLine="true"
+
+                    android:inputType="textCapCharacters"
+
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- BOTTOM BUTTON -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:paddingStart="8dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="7dp"
+
+        android:background="#F8F6FF">
+
+
+        <Button
+            android:id="@+id/btnNext"
+
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+
+            android:text="NEXT  →"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            android:textColor="@android:color/white"
+
+            android:textAllCaps="false"
+
+            android:backgroundTint="#5B21B6"/>
+
+    </LinearLayout>
+
+</LinearLayout>

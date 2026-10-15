@@ -1,0 +1,61 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardParentMessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <!--  PARENT NAME  -->
+        <TextView
+            android:id="@+id/tvParentMessageParentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parent Name"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <!--  STUDENT  -->
+        <TextView
+            android:id="@+id/tvParentMessageStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Student: Student Name"
+            android:textColor="#7B61FF"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+        <!--  MESSAGE LABEL  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Message"
+            android:textColor="#777777"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+        <!--  MESSAGE  -->
+        <TextView
+            android:id="@+id/tvParentMessageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Parent message will appear here."
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+        <!--  REPLY LABEL  -->
+        <TextView
+            android:id="@+id/tvParentReplyLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Teacher Reply" android:textColor="#777777" android:textSize="12sp" android:textStyle="bold" android:visibility="gone"/>
+        <!--  REPLY  -->
+        <TextView android:id="@+id/tvParentReplyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Teacher reply" android:textColor="#333333" android:textSize="14sp" android:visibility="gone"/>
+        <!--  SELECT MESSAGE  -->
+        <TextView android:id="@+id/tvSelectMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:padding="8dp" android:text="Tap to reply" android:textColor="#7B61FF" android:textSize="13sp" android:textStyle="bold"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

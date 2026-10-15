@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeColor="#E7E8EF"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- ================================================= -->
+        <!-- STUDENT INFORMATION -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- STUDENT PHOTO -->
+
+            <ImageView
+                android:id="@+id/ivMyClassStudentPhoto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#EEF0F6"
+                android:contentDescription="Student photo"
+                android:scaleType="centerCrop" />
+
+
+            <!-- STUDENT DETAILS -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMyClassStudentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Name"
+                    android:textColor="#25252B"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMyClassStudentMeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Roll 1 • Admission 001"
+                    android:textColor="#6B6F7B"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvMyClassStudentContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text=""
+                    android:textColor="#8A8F98"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+            <!-- STATUS -->
+
+            <TextView
+                android:id="@+id/tvMyClassStudentStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp"
+
+                android:text="ACTIVE"
+                android:textColor="#167A4A"
+                android:textSize="10sp"
+                android:textStyle="bold"
+
+                android:background="#DDF7EA" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- ACTION BUTTONS -->
+        <!-- ================================================= -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+
+                <!-- VIEW -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStudentView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+
+                    android:text="👁  View"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#4C2A91"
+
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+
+                    app:cornerRadius="14dp"
+                    app:backgroundTint="#F3F0FF"
+                    app:strokeColor="#D6C8F3"
+                    app:strokeWidth="1dp" />
+
+
+                <!-- ATTENDANCE -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStudentAttendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+
+                    android:layout_marginStart="8dp"
+
+                    android:text="📅  Attendance"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#4C2A91"
+
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+
+                    app:cornerRadius="14dp"
+                    app:backgroundTint="#F3F0FF"
+                    app:strokeColor="#D6C8F3"
+                    app:strokeWidth="1dp" />
+
+
+                <!-- MARKS -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStudentMarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+
+                    android:layout_marginStart="8dp"
+
+                    android:text="📊  Marks"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#4C2A91"
+
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+
+                    app:cornerRadius="14dp"
+                    app:backgroundTint="#F3F0FF"
+                    app:strokeColor="#D6C8F3"
+                    app:strokeWidth="1dp" />
+
+
+                <!-- PROGRESS -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStudentProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+
+                    android:layout_marginStart="8dp"
+
+                    android:text="📈  Progress"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#4C2A91"
+
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+
+                    app:cornerRadius="14dp"
+                    app:backgroundTint="#F3F0FF"
+                    app:strokeColor="#D6C8F3"
+                    app:strokeWidth="1dp" />
+
+
+                <!-- REPORT CARD -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStudentReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+
+                    android:layout_marginStart="8dp"
+
+                    android:text="📄  Report Card"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#4C2A91"
+
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+
+                    app:cornerRadius="14dp"
+                    app:backgroundTint="#F3F0FF"
+                    app:strokeColor="#D6C8F3"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

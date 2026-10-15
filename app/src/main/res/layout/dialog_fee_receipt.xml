@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/receiptLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:id="@+id/tvReceiptSchool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MY SCHOOL"
+            android:textAlignment="center"
+            android:textColor="#4B1FA8"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="FEE PAYMENT RECEIPT"
+            android:textAlignment="center"
+            android:textColor="#555555"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:background="#D8D0E5"/>
+
+        <TextView
+            android:id="@+id/tvReceiptNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Receipt No:"
+            android:textColor="#555555"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvReceiptDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textColor="#555555"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Student:"
+            android:textColor="#222222"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvStudentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class:"
+            android:textColor="#555555"
+            android:textSize="13sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:background="#E2E2E2"/>
+
+        <TextView
+            android:id="@+id/tvTotalFees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Total Fees:"
+            android:textColor="#444444"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tvPaidFees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Paid:"
+            android:textColor="#2E7D32"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvRemainingFees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remaining:"
+            android:textColor="#C62828"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvPaymentMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Payment Mode:"
+            android:textColor="#555555"
+            android:textSize="12sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="#D8D0E5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAdminSign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center"
+                android:text="________________\nAdmin Signature"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tvCashierSign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center"
+                android:text="________________\nCashier Signature"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPrintReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:text="🖨  PRINT RECEIPT"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#4B1FA8"/>
+
+    </LinearLayout>
+
+</ScrollView>

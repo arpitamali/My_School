@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F8F6FF"
+
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="18dp"
+    android:paddingBottom="8dp">
+
+
+    <!-- ================================================= -->
+    <!-- BACK -->
+    <!-- ================================================= -->
+
+    <ImageButton
+        android:id="@+id/btnBack"
+
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+
+        android:background="@android:color/transparent"
+
+        android:src="@android:drawable/ic_menu_revert"
+
+        android:contentDescription="Back"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- TITLE -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvTitle"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="18dp"
+
+        android:text="Staff Monthly Attendance"
+        android:textColor="#17102D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- STAFF LABEL -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvStaffLabel"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="18dp"
+
+        android:text="Select Staff"
+        android:textColor="#444444"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- STAFF SPINNER -->
+    <!-- ================================================= -->
+
+    <Spinner
+        android:id="@+id/spinnerStaff"
+
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+
+        android:layout_marginTop="6dp"
+
+        android:background="@drawable/bg_monthly_spinner"
+
+        android:paddingStart="12dp"
+        android:paddingEnd="10dp"
+
+        android:spinnerMode="dropdown"
+
+        app:layout_constraintTop_toBottomOf="@id/tvStaffLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- MONTH LABEL -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvMonthLabel"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="13dp"
+
+        android:text="Month"
+        android:textColor="#444444"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/spinnerStaff"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- YEAR LABEL -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvYearLabel"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="10dp"
+
+        android:text="Year"
+        android:textColor="#444444"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/spinnerStaff"
+        app:layout_constraintStart_toEndOf="@id/spinnerMonth" />
+
+
+    <!-- ================================================= -->
+    <!-- MONTH -->
+    <!-- ================================================= -->
+
+    <Spinner
+        android:id="@+id/spinnerMonth"
+
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+
+        android:background="@drawable/bg_monthly_spinner"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="8dp"
+
+        android:spinnerMode="dropdown"
+
+        app:layout_constraintTop_toBottomOf="@id/tvMonthLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spinnerYear" />
+
+
+    <!-- ================================================= -->
+    <!-- YEAR -->
+    <!-- ================================================= -->
+
+    <Spinner
+        android:id="@+id/spinnerYear"
+
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+
+        android:background="@drawable/bg_monthly_spinner"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="8dp"
+
+        android:spinnerMode="dropdown"
+
+        app:layout_constraintTop_toBottomOf="@id/tvYearLabel"
+        app:layout_constraintStart_toEndOf="@id/spinnerMonth"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- SELECTED STAFF -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvSelectedStaff"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="13dp"
+
+        android:text="No staff selected"
+        android:textColor="#5B21B6"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/spinnerYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- SUMMARY -->
+    <!-- ================================================= -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/summaryContainer"
+
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvSelectedStaff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <!-- WORKING DAYS -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardWorkingDays"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginEnd="4dp"
+
+            app:cardCornerRadius="13dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#D8D0E8"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cardPresent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Working Days"
+                    android:textColor="#777777"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvWorkingDays"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:text="0"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- PRESENT -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPresent"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+
+            app:cardCornerRadius="13dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#D8D0E8"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintStart_toEndOf="@id/cardWorkingDays"
+            app:layout_constraintEnd_toStartOf="@id/cardAbsent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Present"
+                    android:textColor="#777777"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvPresent"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:text="0"
+                    android:textColor="#16803C"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ABSENT -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAbsent"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+
+            app:cardCornerRadius="13dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#D8D0E8"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintStart_toEndOf="@id/cardPresent"
+            app:layout_constraintEnd_toStartOf="@id/cardHalfDay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Absent"
+                    android:textColor="#777777"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvAbsent"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:text="0"
+                    android:textColor="#D62828"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- HALF DAY -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHalfDay"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="4dp"
+
+            app:cardCornerRadius="13dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#D8D0E8"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintStart_toEndOf="@id/cardAbsent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Half Day"
+                    android:textColor="#777777"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvHalfDay"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:text="0"
+                    android:textColor="#D98900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- ================================================= -->
+    <!-- ATTENDANCE PERCENTAGE -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvAttendancePercentage"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:text="Attendance: 0.00%"
+        android:textColor="#4B1FA8"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/summaryContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- HISTORY TITLE -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/tvHistoryTitle"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="7dp"
+
+        android:text="Daily Attendance History"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/tvAttendancePercentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ================================================= -->
+    <!-- DAILY LIST -->
+    <!-- ================================================= -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMonthlyAttendance"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="7dp"
+
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

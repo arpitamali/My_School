@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F6FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="30dp">
+
+        <!-- ================= HEADER ================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Add Staff / Teacher"
+                android:textColor="#4B1FA8"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <Space
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ================= STEP INDICATOR ================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/step_active"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:background="#DDDDDD"/>
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/step_inactive"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#777777"/>
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:background="#DDDDDD"/>
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/step_inactive"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="#777777"/>
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:background="#DDDDDD"/>
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/step_inactive"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#777777"/>
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:background="#DDDDDD"/>
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/step_inactive"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="#777777"/>
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:background="#DDDDDD"/>
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/step_inactive"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="#777777"/>
+
+        </LinearLayout>
+
+
+        <!-- ================= TITLE ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Basic Information"
+            android:textColor="#17102D"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Enter staff member's personal details"
+            android:textColor="#777777"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+
+        <!-- ================= PHOTO ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Staff Photo"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <Button
+            android:id="@+id/btnSelectPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="7dp"
+            android:text="📷  Select Staff Photo"
+            android:textColor="#5B21B6"
+            android:textAllCaps="false"
+            android:backgroundTint="#F0E9FF"/>
+
+
+        <!-- ================= FIRST NAME ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Name *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="18dp"/>
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter first name"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= MIDDLE NAME ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Middle Name *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etMiddleName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter middle name"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= LAST NAME ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter last name"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= DOB ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Select date of birth"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= GENDER ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spGender"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+
+        <!-- ================= BLOOD GROUP ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+
+        <!-- ================= AADHAAR ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aadhaar Number"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etAadhaar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter 12 digit Aadhaar number"
+            android:layout_marginTop="7dp"
+            android:inputType="number"
+            android:maxLength="12"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= BIRTH PLACE ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Birth Place"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etBirthPlace"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter birth place"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= NATIONALITY ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nationality *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etNationality"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter nationality"
+            android:text="Indian"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= MOTHER TONGUE ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mother Tongue"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etMotherTongue"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter mother tongue"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= RELIGION ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Religion"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spReligion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+
+        <!-- ================= CATEGORY ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+
+        <!-- ================= CASTE ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Caste"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etCaste"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter caste"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= SUB CASTE ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sub-Caste"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etSubCaste"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter sub-caste"
+            android:layout_marginTop="7dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+
+        <!-- ================= SPECIAL NEEDS ================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Special Needs / Disability"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spSpecialNeeds"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+
+        <!-- ================= NEXT BUTTON ================= -->
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="25dp"
+            android:text="NEXT  →"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="#5B21B6"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

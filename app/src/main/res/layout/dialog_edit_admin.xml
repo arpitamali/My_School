@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ADMIN NAME -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin Name"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/etAdminName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:hint="Enter admin name"
+            android:inputType="textCapSentences"/>
+
+        <!-- EMAIL -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Admin Email"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/etAdminEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:hint="Enter admin email"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"/>
+
+        <!-- MOBILE -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mobile Number"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/etAdminMobile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:hint="Enter mobile number"
+            android:inputType="phone"
+            android:maxLength="10"/>
+
+    </LinearLayout>
+
+</ScrollView>

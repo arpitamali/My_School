@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#E1D9F5"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student Name"
+            android:textColor="#17102D"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvStudentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class 10 - A"
+            android:textColor="#5B21B6"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvAdmissionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admission No: 001"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap to view ID Card  ›"
+            android:textColor="#5B21B6"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

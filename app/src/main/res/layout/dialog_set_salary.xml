@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Type"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#222222"/>
+
+    <RadioGroup
+        android:id="@+id/rgPaymentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbFixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fixed Payment"/>
+
+        <RadioButton
+            android:id="@+id/rbDayWise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Day Wise"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

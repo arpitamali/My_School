@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Internet Permission for Firebase -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MySCHOOL">
+
+        <!-- App Information -->
+        <activity
+            android:name=".AppDemoActivity"
+            android:exported="false" />
+
+        <!-- Demo Dashboard -->
+        <activity
+            android:name=".DemoDashboardActivity"
+            android:exported="false" />
+
+        <!-- Parent / Student Features -->
+        <activity
+            android:name=".ParentStudentFeatureActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ParentEventsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ParentNoticesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ParentTeacherMessagingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ParentSchoolEnquiryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ParentSchoolFacilitiesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EnquiryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SchoolFacilitiesActivity"
+            android:exported="false" />
+
+        <!-- Reports -->
+        <activity
+            android:name=".AllStudentReportCardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AllStudentAttendanceActivity"
+            android:exported="false" />
+
+        <!-- Timetable -->
+        <activity
+            android:name=".AdminTimetableActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SchoolTimeSetupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherTimetableActivity"
+            android:exported="false" />
+
+        <!-- Teacher Features -->
+        <activity
+            android:name=".TeacherParentMessagesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherAllNoticeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherNoticeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherAssignmentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherFillMarksActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherConductTestActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherHomeworkActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherClassWorkActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentProgressActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherMarksActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherStudentAttendanceActivity"
+            android:exported="false" />
+
+        <!-- Admin Features -->
+        <activity
+            android:name=".AdminAccountActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AchievementsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MediaGalleryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".UpdateSchoolActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SchoolInformationActivity"
+            android:exported="false" />
+
+        <!-- Teacher ID Card -->
+        <activity
+            android:name=".SelectTeacherForIdActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherIDCardActivity"
+            android:exported="false" />
+
+        <!-- Staff Management -->
+        <activity
+            android:name=".SetSalaryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SalaryPaymentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffMonthlyAttendanceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherAttendanceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditStaffActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SeeStaffActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep7"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep6"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep5"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep4"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep3"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep2"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStaffStep1"
+            android:exported="false" />
+
+        <!-- Parent Dashboard -->
+        <activity
+            android:name=".ParentDashboardActivity"
+            android:exported="false" />
+
+        <!-- Student Management -->
+        <activity
+            android:name=".StudentListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentIdCardPreviewActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".BonafidePreviewActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TransferStudentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentReportCardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".BonafideCertificateActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentIdCardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentFeesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentAttendanceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".UpdateStudentsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SeeStudentsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep7"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep6"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep5"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep4"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep3"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep2"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddStudentStep1"
+            android:exported="false" />
+
+        <!-- School Registration -->
+        <activity
+            android:name=".SchoolRegistrationStep1"
+            android:exported="false" />
+
+        <activity
+            android:name=".SchoolRegistrationStep2"
+            android:exported="false" />
+
+        <activity
+            android:name=".SchoolRegistrationStep3"
+            android:exported="false" />
+
+        <!-- Legacy Activities -->
+        <activity
+            android:name=".TrialAccountInfoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- Dashboards -->
+        <activity
+            android:name=".StudentDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+
+        <!-- Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+    </application>
+
+</manifest>

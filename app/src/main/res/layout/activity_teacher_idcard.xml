@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TOP SPACE -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Teacher ID Card"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ID CARD AREA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="30dp">
+
+            <!-- =========================================== -->
+            <!-- MAIN ID CARD -->
+            <!-- =========================================== -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard"
+                android:layout_width="350dp"
+                android:layout_height="500dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:background="#FFFFFF">
+
+
+                    <!-- TOP PURPLE HEADER -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#5B35D5"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tvSchoolName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="School Name"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                        <TextView
+                            android:id="@+id/tvSchoolAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="School Address"
+                            android:textSize="11sp"
+                            android:textColor="#EDE7FF"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+
+                    <!-- SMALL TITLE -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TEACHER IDENTITY CARD"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#6B55B8"
+                        android:gravity="center"
+                        android:letterSpacing="0.08"
+                        android:layout_marginTop="12dp"/>
+
+
+                    <!-- LINE -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E3DFF2"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="10dp"/>
+
+
+                    <!-- TEACHER PHOTO -->
+
+                    <ImageView
+                        android:id="@+id/ivTeacherPhoto"
+                        android:layout_width="105dp"
+                        android:layout_height="115dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:scaleType="centerCrop"
+                        android:background="#EEEEEE"
+                        android:contentDescription="Teacher Photo"/>
+
+
+                    <!-- TEACHER NAME -->
+
+                    <TextView
+                        android:id="@+id/tvTeacherName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teacher Name"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="#222222"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="8dp"/>
+
+
+                    <!-- DETAILS -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tvQualification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Qualification:"
+                            android:textSize="12sp"
+                            android:textColor="#444444"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Email:"
+                            android:textSize="12sp"
+                            android:textColor="#444444"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phone:"
+                            android:textSize="12sp"
+                            android:textColor="#444444"
+                            android:maxLines="1"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Address:"
+                            android:textSize="12sp"
+                            android:textColor="#444444"
+                            android:maxLines="2"
+                            android:ellipsize="end"/>
+
+                    </LinearLayout>
+
+
+                    <!-- PRINCIPAL SIGN -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom|end"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="95dp"
+                            android:layout_height="28dp"/>
+
+                        <View
+                            android:layout_width="95dp"
+                            android:layout_height="1dp"
+                            android:background="#222222"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Principal"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:layout_marginTop="3dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

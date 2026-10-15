@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F6FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Back"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Add Student"
+                android:textColor="#4B1FA8"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <Space
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Step 2 of 6"
+            android:textColor="#5B21B6"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Academic Information"
+            android:textColor="#17102D"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Enter student's academic details"
+            android:textColor="#777777"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admission Number *"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <EditText
+            android:id="@+id/etAdmissionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter admission number"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admission Date *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etAdmissionDate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Select admission date"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Academic Year *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etAcademicYear"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Example: 2026-27"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spClass"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Division *"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/spDivision"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roll Number"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etRollNumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter roll number"
+            android:inputType="number"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous School Name"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etPreviousSchool"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter previous school name"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous Class"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etPreviousClass"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter previous class"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous School Leaving Certificate No."
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etLeavingCertificate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter certificate number"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="NEXT  ›"
+            android:textSize="17sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#5B21B6"
+            android:layout_marginTop="25dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

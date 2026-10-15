@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/cardStaff"
+
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+
+    android:clickable="true"
+    android:focusable="true"
+
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+
+    app:cardBackgroundColor="#FFFFFF"
+
+    app:strokeColor="#E5E0F0"
+    app:strokeWidth="1dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingStart="14dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+        <!-- ================================================= -->
+        <!-- NAME -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvStaffName"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            android:text="Teacher Name"
+
+            android:textColor="#211834"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@id/btnEditStaff" />
+
+
+        <!-- ================================================= -->
+        <!-- QUALIFICATION -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvStaffQualification"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            android:text="Qualification: B.Ed"
+
+            android:textColor="#666666"
+            android:textSize="13sp"
+
+            app:layout_constraintTop_toBottomOf="@id/tvStaffName"
+
+            app:layout_constraintStart_toStartOf="@id/tvStaffName"
+
+            app:layout_constraintEnd_toStartOf="@id/btnEditStaff" />
+
+
+        <!-- ================================================= -->
+        <!-- MOBILE -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvStaffMobile"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Mobile: 9876543210"
+
+            android:textColor="#666666"
+            android:textSize="13sp"
+
+            app:layout_constraintTop_toBottomOf="@id/tvStaffQualification"
+
+            app:layout_constraintStart_toStartOf="@id/tvStaffName"
+
+            app:layout_constraintEnd_toStartOf="@id/btnEditStaff" />
+
+
+        <!-- ================================================= -->
+        <!-- EDIT -->
+        <!-- ================================================= -->
+
+        <ImageButton
+            android:id="@+id/btnEditStaff"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_marginEnd="2dp"
+
+            android:background="@android:color/transparent"
+
+            android:src="@android:drawable/ic_menu_edit"
+
+            android:tint="#5B21B6"
+
+            android:contentDescription="Edit"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@id/btnDeleteStaff" />
+
+
+        <!-- ================================================= -->
+        <!-- DELETE -->
+        <!-- ================================================= -->
+
+        <ImageButton
+            android:id="@+id/btnDeleteStaff"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:background="@android:color/transparent"
+
+            android:src="@android:drawable/ic_menu_delete"
+
+            android:tint="#D32F2F"
+
+            android:contentDescription="Delete"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,204 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootParentDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F7F7F3">
+    <!--  =====================================================  -->
+    <!--  MAIN DASHBOARD  -->
+    <!--  =====================================================  -->
+    <LinearLayout
+        android:id="@+id/mainDashboardLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F7F7F3">
+        <!--  =================================================  -->
+        <!--  TOP HEADER  -->
+        <!--  =================================================  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="#FFFFFF">
+            <!--  MENU  -->
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="Menu"
+                android:padding="8dp"/>
+            <!--  SCHOOL NAME  -->
+            <TextView android:id="@+id/tvTopSchoolName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:gravity="center_vertical"
+                android:text="My School"
+                android:textColor="#222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1" android:ellipsize="end"/>
+            <!--  NOTIFICATION  -->
+            <ImageButton android:id="@+id/btnNotifications" android:layout_width="40dp" android:layout_height="40dp" android:background="@android:color/transparent" android:src="@drawable/ic_notifications" android:contentDescription="Notifications" android:padding="8dp"/>
+        </LinearLayout>
+        <!--  =================================================  -->
+        <!--  CONTENT  -->
+        <!--  =================================================  -->
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:overScrollMode="never">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="12dp" android:paddingEnd="12dp" android:paddingBottom="25dp">
+                <!--  =========================================  -->
+                <!--  STUDENT CARD  -->
+                <!--  =========================================  -->
+                <LinearLayout android:id="@+id/cardChild" android:layout_width="match_parent" android:layout_height="78dp" android:layout_marginTop="12dp" android:background="#FFFFFF" android:gravity="center_vertical" android:orientation="horizontal" android:padding="10dp">
+                    <!--  STUDENT INITIAL  -->
+                    <TextView android:id="@+id/tvChildAvatar" android:layout_width="54dp" android:layout_height="54dp" android:background="#EFEAE0" android:gravity="center" android:text="S" android:textColor="#5A4A35" android:textSize="19sp" android:textStyle="bold"/>
+                    <!--  STUDENT INFO  -->
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp">
+                        <TextView android:id="@+id/tvChildName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Student Name" android:textColor="#222222" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvChildClass" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Class - Division • Roll No." android:textColor="#777777" android:textSize="11sp"/>
+                    </LinearLayout>
+                    <!--  SWITCH STUDENT  -->
+                    <TextView android:id="@+id/btnSwitchStudent" android:layout_width="92dp" android:layout_height="36dp" android:layout_marginStart="5dp" android:background="#F3E8D5" android:gravity="center" android:text="Switch Student" android:textColor="#5A4A35" android:textSize="9sp" android:textStyle="bold" android:visibility="gone"/>
+                </LinearLayout>
+                <!--  =========================================  -->
+                <!--  QUICK ACCESS TITLE  -->
+                <!--  =========================================  -->
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:layout_marginBottom="8dp" android:text="Quick Access" android:textColor="#222222" android:textSize="13sp" android:textStyle="bold"/>
+                <!--  =========================================  -->
+                <!--  QUICK ACCESS ROW 1  -->
+                <!--  =========================================  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="88dp" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/cardAttendance" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="✅"/>
+                        <TextView style="@style/ParentQuickText" android:text="Attendance"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/cardHomework" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="📘"/>
+                        <TextView style="@style/ParentQuickText" android:text="Homework"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/cardExamMarks" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="📝"/>
+                        <TextView style="@style/ParentQuickText" android:text="Exam &amp; Marks"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  =========================================  -->
+                <!--  QUICK ACCESS ROW 2  -->
+                <!--  =========================================  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="88dp" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/cardFees" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="💳"/>
+                        <TextView style="@style/ParentQuickText" android:text="Fees"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/cardTimeTable" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="📅"/>
+                        <TextView style="@style/ParentQuickText" android:text="Time Table"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/cardNotices" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="📢"/>
+                        <TextView style="@style/ParentQuickText" android:text="Notices"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  =========================================  -->
+                <!--  QUICK ACCESS ROW 3  -->
+                <!--  =========================================  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="88dp" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/cardGallery" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="🏫"/>
+                        <TextView style="@style/ParentQuickText" android:text="School Facilities"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/cardEvents" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="⭐"/>
+                        <TextView style="@style/ParentQuickText" android:text="Events"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/cardBusTracking" style="@style/ParentQuickCard">
+                        <TextView style="@style/ParentQuickIcon" android:text="💬"/>
+                        <TextView style="@style/ParentQuickText" android:text="Teacher Messaging"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  =========================================  -->
+                <!--  UPCOMING EVENTS TITLE  -->
+                <!--  =========================================  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Upcoming Events" android:textColor="#222222" android:textSize="13sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvEventsViewAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View All" android:textColor="#8A6D3B" android:textSize="11sp" android:textStyle="bold" android:padding="4dp" android:visibility="visible"/>
+                </LinearLayout>
+                <!--  EVENTS CONTAINER  -->
+                <LinearLayout android:id="@+id/eventsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:background="#FFFFFF" android:orientation="vertical" android:padding="10dp"> </LinearLayout>
+                <!--  =========================================  -->
+                <!--  RECENT NOTICE TITLE  -->
+                <!--  =========================================  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Recent Notices" android:textColor="#222222" android:textSize="13sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvNoticeViewAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View All" android:textColor="#8A6D3B" android:textSize="11sp" android:textStyle="bold" android:padding="4dp" android:visibility="visible"/>
+                </LinearLayout>
+                <!--  NOTICES CONTAINER  -->
+                <LinearLayout android:id="@+id/noticesContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:background="#FFFFFF" android:orientation="vertical" android:padding="10dp"> </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!--  =====================================================  -->
+    <!--  DRAWER SCRIM  -->
+    <!--  =====================================================  -->
+    <View android:id="@+id/drawerScrim" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#66000000" android:visibility="gone" android:clickable="true" android:focusable="true"/>
+    <!--  =====================================================  -->
+    <!--  DRAWER  -->
+    <!--  =====================================================  -->
+    <LinearLayout android:id="@+id/parentDrawer" android:layout_width="250dp" android:layout_height="match_parent" android:layout_gravity="start" android:orientation="vertical" android:background="#FCFAF5" android:elevation="15dp">
+        <!--  ================================================  -->
+        <!--  SCHOOL HEADER  -->
+        <!--  ================================================  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="82dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="13dp" android:paddingEnd="7dp">
+            <TextView android:id="@+id/tvDrawerSchoolLogo" android:layout_width="50dp" android:layout_height="50dp" android:background="#EFE6D8" android:gravity="center" android:text="🏫" android:textSize="24sp"/>
+            <TextView android:id="@+id/tvDrawerSchool" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:paddingStart="11dp" android:text="My School" android:textColor="#222222" android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/btnDrawerClose" android:layout_width="43dp" android:layout_height="43dp" android:gravity="center" android:text="✕" android:textColor="#222222" android:textSize="21sp" android:clickable="true" android:focusable="true"/>
+        </LinearLayout>
+        <!--  ================================================  -->
+        <!--  CHILD  -->
+        <!--  ================================================  -->
+        <LinearLayout android:id="@+id/drawerChildCard" android:layout_width="match_parent" android:layout_height="88dp" android:background="#F7EEDC" android:gravity="center_vertical" android:orientation="horizontal" android:padding="11dp">
+            <TextView android:id="@+id/tvDrawerAvatar" android:layout_width="54dp" android:layout_height="54dp" android:background="#EFEAE0" android:gravity="center" android:text="S" android:textColor="#5A4A35" android:textSize="19sp" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="11dp">
+                <TextView android:id="@+id/tvDrawerName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Student Name" android:textColor="#222222" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvDrawerRole" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Parent / Student" android:textColor="#777777" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--  ================================================  -->
+        <!--  SWITCH STUDENT  -->
+        <!--  ================================================  -->
+        <TextView android:id="@+id/btnDrawerSwitchStudent" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginStart="10dp" android:layout_marginTop="8dp" android:layout_marginEnd="10dp" android:background="#F1E5D1" android:gravity="center" android:text="Switch Student" android:textColor="#5A4A35" android:textSize="12sp" android:textStyle="bold" android:visibility="gone"/>
+        <!--  ================================================  -->
+        <!--  MENU  -->
+        <!--  ================================================  -->
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="7dp" android:overScrollMode="never">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView android:id="@+id/navHome" style="@style/ParentDrawerItem" android:text="🏠 Home"/>
+                <TextView android:id="@+id/navMyChild" style="@style/ParentDrawerItem" android:text="👦 My Child"/>
+                <TextView android:id="@+id/navAttendance" style="@style/ParentDrawerItem" android:text="✅ Attendance"/>
+                <TextView android:id="@+id/navHomework" style="@style/ParentDrawerItem" android:text="📘 Homework"/>
+                <TextView android:id="@+id/navExamMarks" style="@style/ParentDrawerItem" android:text="📝 Exam &amp; Marks"/>
+                <TextView android:id="@+id/navFees" style="@style/ParentDrawerItem" android:text="💳 Fees"/>
+                <TextView android:id="@+id/navTimeTable" style="@style/ParentDrawerItem" android:text="📅 Time Table"/>
+                <TextView android:id="@+id/navNotices" style="@style/ParentDrawerItem" android:text="📢 Notices"/>
+                <TextView android:id="@+id/navGallery" style="@style/ParentDrawerItem" android:text="🏫 School Facilities"/>
+                <TextView android:id="@+id/navEvents" style="@style/ParentDrawerItem" android:text="⭐ Events"/>
+                <TextView android:id="@+id/navBusTracking" style="@style/ParentDrawerItem" android:text="💬 Teacher Messaging"/>
+                <TextView android:id="@+id/navMessages" style="@style/ParentDrawerItem" android:text="✉️ School Enquiry"/>
+                <TextView android:id="@+id/navSettings" style="@style/ParentDrawerItem" android:text="⚙️ Settings"/>
+                <TextView android:id="@+id/navHelp" style="@style/ParentDrawerItem" android:text="❓ Help &amp; Support"/>
+                <TextView android:id="@+id/navAbout" style="@style/ParentDrawerItem" android:text="ℹ️ About Us"/>
+            </LinearLayout>
+        </ScrollView>
+        <!--  ================================================  -->
+        <!--  LOGOUT  -->
+        <!--  ================================================  -->
+        <TextView android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="55dp" android:layout_margin="9dp" android:background="#FFFFFF" android:gravity="center" android:text="↪ Logout" android:textColor="#E53935" android:textSize="13sp" android:textStyle="bold" android:clickable="true" android:focusable="true"/>
+    </LinearLayout>
+</FrameLayout>

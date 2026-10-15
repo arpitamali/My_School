@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/cardAttendanceStaff"
+
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeColor="#E5E0F0"
+    app:strokeWidth="1dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+
+        <!-- ================================================= -->
+        <!-- STAFF INFO -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:id="@+id/textContainer"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:layout_marginEnd="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/radioGroup">
+
+
+            <TextView
+                android:id="@+id/tvAttendanceName"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:maxLines="1"
+                android:ellipsize="end"
+
+                android:text="Teacher Name"
+
+                android:textColor="#211834"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvAttendanceQualification"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+
+                android:maxLines="1"
+                android:ellipsize="end"
+
+                android:text="Qualification"
+
+                android:textColor="#777777"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/tvAttendanceStatus"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+
+                android:text="⚠ Not Marked"
+
+                android:textColor="#8A7A00"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- ATTENDANCE OPTIONS -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:id="@+id/radioGroup"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <!-- PRESENT -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPresent"
+
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+
+                android:layout_marginEnd="4dp"
+
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+
+                android:padding="0dp"
+
+                android:text="P"
+
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                android:textColor="#5F6B61"
+
+                android:background="@drawable/attendance_unselected" />
+
+
+            <!-- ABSENT -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAbsent"
+
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+
+                android:layout_marginEnd="4dp"
+
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+
+                android:padding="0dp"
+
+                android:text="A"
+
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                android:textColor="#7A6262"
+
+                android:background="@drawable/attendance_unselected" />
+
+
+            <!-- HALF DAY -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnHalfDay"
+
+                android:layout_width="46dp"
+                android:layout_height="42dp"
+
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+
+                android:padding="0dp"
+
+                android:text="HD"
+
+                android:textSize="11sp"
+                android:textStyle="bold"
+
+                android:textColor="#7A6D59"
+
+                android:background="@drawable/attendance_unselected" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

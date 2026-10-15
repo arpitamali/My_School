@@ -1,0 +1,21 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="#FFFFFF" app:strokeColor="#E5E0F0" app:strokeWidth="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <!--  Top  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/tvEnquiryName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Parent Name" android:textColor="#17102D" android:textSize="17sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvEnquiryStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="12dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:text="New" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" android:background="#6C3FCB" android:clickable="true" android:focusable="true"/>
+        </LinearLayout>
+        <!--  Phone  -->
+        <TextView android:id="@+id/tvEnquiryPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="📞 9876543210" android:textColor="#444444" android:textSize="14sp"/>
+        <!--  Email  -->
+        <TextView android:id="@+id/tvEnquiryEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="✉ parent@gmail.com" android:textColor="#444444" android:textSize="14sp"/>
+        <!--  Message  -->
+        <TextView android:id="@+id/tvEnquiryMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="I want admission information." android:textColor="#555555" android:textSize="14sp"/>
+        <!--  Bottom  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/tvEnquiryDate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="11 Oct 2026" android:textColor="#888888" android:textSize="12sp"/>
+            <ImageButton android:id="@+id/btnDeleteEnquiry" android:layout_width="42dp" android:layout_height="42dp" android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_delete" android:contentDescription="Delete Enquiry"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

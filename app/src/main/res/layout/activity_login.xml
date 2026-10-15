@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    android:clipToPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:id="@+id/contentGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- LOGO -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/my_school_logo"
+                android:scaleType="fitCenter"
+                android:contentDescription="School Logo" />
+
+            <!-- APP NAME -->
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:text="My School"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#6D28D9" />
+
+            <!-- TAGLINE -->
+            <TextView
+                android:id="@+id/tvTagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:text="School Management System"
+                android:textSize="13sp"
+                android:textColor="#666666" />
+
+            <!-- ROLE TABS -->
+            <LinearLayout
+                android:id="@+id/tabRoleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:background="@drawable/bg_tab_container">
+
+                <TextView
+                    android:id="@+id/tabAdmin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Admin"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_tab_selected" />
+
+                <TextView
+                    android:id="@+id/tabTeacher"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Teacher"
+                    android:textSize="13sp"
+                    android:textColor="#777777" />
+
+                <TextView
+                    android:id="@+id/tabParentStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Parent / Student"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+
+            </LinearLayout>
+
+            <!-- EMAIL LABEL -->
+            <TextView
+                android:id="@+id/tvEmailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:textSize="13sp"
+                android:textColor="#333333" />
+
+            <!-- USERNAME -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edittext_bg"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:hint="Enter email"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:textColorHint="#AAAAAA"
+                android:inputType="text" />
+
+            <!-- PASSWORD LABEL -->
+            <TextView
+                android:id="@+id/tvPasswordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Password"
+                android:textSize="13sp"
+                android:textColor="#333333" />
+
+            <!-- PASSWORD -->
+            <RelativeLayout
+                android:id="@+id/passwordContainer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edittext_bg">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="48dp"
+                    android:hint="Enter password"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#AAAAAA"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/ivTogglePassword"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:src="@drawable/ic_eye_off"
+                    app:tint="#999999"
+                    android:contentDescription="Toggle password" />
+
+            </RelativeLayout>
+
+            <!-- LOGIN BUTTON -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Login"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button_purple" />
+
+            <!-- OR -->
+            <LinearLayout
+                android:id="@+id/orContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#E0E0E0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="or"
+                    android:textSize="12sp"
+                    android:textColor="#999999" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#E0E0E0" />
+
+            </LinearLayout>
+
+            <!-- APP INFORMATION -->
+            <TextView
+                android:id="@+id/tvTrial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="App Information"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#6D28D9"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- REGISTER SCHOOL -->
+            <TextView
+                android:id="@+id/tvRegisterSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="New School? Register Your School"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#6D28D9"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- CONTACT US -->
+            <TextView
+                android:id="@+id/tvContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:padding="8dp"
+                android:text="Don't have an account? Contact Us"
+                android:textSize="13sp"
+                android:textColor="#6D28D9"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

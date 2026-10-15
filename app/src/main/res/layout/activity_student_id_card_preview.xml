@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Back"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Student ID Card"
+                android:textColor="#4B1FA8"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- ID CARD -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="5dp"
+            app:strokeColor="#D9CCF5"
+            app:strokeWidth="1dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+
+                <!-- SCHOOL NAME -->
+
+                <TextView
+                    android:id="@+id/tvSchoolName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MY SCHOOL"
+                    android:textColor="#4B1FA8"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+
+                <!-- SCHOOL ADDRESS -->
+
+                <TextView
+                    android:id="@+id/tvSchoolAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="School Address"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#5B21B6"
+                    android:layout_marginTop="15dp"/>
+
+
+                <!-- TITLE -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="STUDENT ID CARD"
+                    android:textColor="#17102D"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"/>
+
+
+                <!-- ================================================= -->
+                <!-- PHOTO -->
+                <!-- ================================================= -->
+
+                <ImageView
+                    android:id="@+id/ivStudentPhoto"
+                    android:layout_width="105dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:background="#EEEEEE"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:contentDescription="Student Photo"/>
+
+
+                <!-- STUDENT NAME -->
+
+                <TextView
+                    android:id="@+id/tvStudentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student Name"
+                    android:textColor="#17102D"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="14dp"/>
+
+
+                <!-- CLASS -->
+
+                <TextView
+                    android:id="@+id/tvClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Class 10 - A"
+                    android:textColor="#5B21B6"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+
+                <!-- ================================================= -->
+                <!-- DETAILS -->
+                <!-- ================================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="22dp">
+
+
+                    <!-- ROLL -->
+
+                    <TextView
+                        android:id="@+id/tvRollNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Roll No: 12"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:padding="4dp"/>
+
+
+                    <!-- ACADEMIC YEAR -->
+
+                    <TextView
+                        android:id="@+id/tvAcademicYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Academic Year: 2026-27"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:padding="4dp"/>
+
+
+                    <!-- ADDRESS -->
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address: Sangli"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:padding="4dp"/>
+
+
+                    <!-- CONTACT -->
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contact: 9876543210"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:padding="4dp"/>
+
+                </LinearLayout>
+
+
+                <!-- FOOTER -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Valid Student Identification"
+                    android:textColor="#777777"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

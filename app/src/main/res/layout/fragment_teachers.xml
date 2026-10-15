@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F6FF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- ================================================= -->
+        <!-- TITLE -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvTeachersTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="Teachers / Staff"
+            android:textColor="#17102D"
+            android:textSize="25sp"
+            android:textStyle="bold"
+
+            android:layout_marginTop="24dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- ================================================= -->
+        <!-- SUBTITLE -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvTeachersSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="Manage your school teachers and staff"
+            android:textColor="#777777"
+            android:textSize="14sp"
+
+            android:layout_marginTop="5dp"
+
+            app:layout_constraintTop_toBottomOf="@id/tvTeachersTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- ================================================= -->
+        <!-- TOTAL STAFF -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTotalTeachers"
+
+            android:layout_width="0dp"
+            android:layout_height="105dp"
+
+            android:layout_marginTop="20dp"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/tvTeachersSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Total Teachers / Staff"
+                    android:textColor="#777777"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalTeachers"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:text="0"
+                    android:textColor="#4B1FA8"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- ROW 1 -->
+        <!-- ADD TEACHER + SEE TEACHERS -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnAddTeacher"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/cardTotalTeachers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSeeTeachers">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="+"
+                    android:textColor="#5B21B6"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Add Teacher / Staff"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSeeTeachers"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/cardTotalTeachers"
+            app:layout_constraintStart_toEndOf="@id/btnAddTeacher"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="👨‍🏫"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="See Teachers / Staff"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- ROW 2 -->
+        <!-- ATTENDANCE + MONTHLY ATTENDANCE -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnTeacherAttendance"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnSeeTeachers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnStaffMonthlyAttendance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="📋"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Attendance"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnStaffMonthlyAttendance"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnSeeTeachers"
+            app:layout_constraintStart_toEndOf="@id/btnTeacherAttendance"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="📊"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Staff Monthly Attendance"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- ROW 3 -->
+        <!-- ASSIGN CLASS + TEACHER ID CARD -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnAssignClass"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnTeacherAttendance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnTeacherId">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="📚"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Assign Class &amp; Subject"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnTeacherId"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnStaffMonthlyAttendance"
+            app:layout_constraintStart_toEndOf="@id/btnAssignClass"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="🪪"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Teacher ID Card"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- ROW 4 -->
+        <!-- SET SALARY + SALARY / PAYMENT -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSetSalary"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnAssignClass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSalary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="💵"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Set Salary"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSalary"
+
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="5dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+
+            app:strokeColor="#E5E0F0"
+            app:strokeWidth="1dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnTeacherId"
+            app:layout_constraintStart_toEndOf="@id/btnSetSalary"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="💰"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="Salary / Payment"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM SPACE -->
+        <!-- ================================================= -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnSetSalary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

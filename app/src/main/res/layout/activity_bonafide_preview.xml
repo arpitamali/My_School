@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="Back"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="Certificate Preview"
+                android:textColor="#4B1FA8"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+
+            <Space
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- CERTIFICATE -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:id="@+id/certificateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:elevation="4dp">
+
+
+            <!-- OUTER BORDER -->
+
+            <LinearLayout
+                android:id="@+id/certificateBorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#5B21B6"
+                android:padding="2dp">
+
+
+                <!-- INNER PAPER -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@android:color/white"
+                    android:padding="24dp">
+
+
+                    <!-- SCHOOL -->
+
+                    <TextView
+                        android:id="@+id/tvSchoolName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MY SCHOOL"
+                        android:textColor="#17102D"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+
+                    <TextView
+                        android:id="@+id/tvSchoolAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="School Address"
+                        android:textColor="#555555"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"/>
+
+
+                    <!-- LINE -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#5B21B6"
+                        android:layout_marginTop="15dp"/>
+
+
+                    <!-- CERTIFICATE TITLE -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BONAFIDE CERTIFICATE"
+                        android:textColor="#4B1FA8"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="25dp"/>
+
+
+                    <!-- NUMBER -->
+
+                    <TextView
+                        android:id="@+id/tvCertificateNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Certificate No:"
+                        android:textColor="#555555"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"/>
+
+
+                    <!-- BODY -->
+
+                    <TextView
+                        android:id="@+id/tvCertificateBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is to certify that..."
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:lineSpacingExtra="7dp"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp"/>
+
+
+                    <!-- PURPOSE -->
+
+                    <TextView
+                        android:id="@+id/tvPurpose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Purpose:"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"/>
+
+
+                    <!-- DATE -->
+
+                    <TextView
+                        android:id="@+id/tvCertificateDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date:"
+                        android:textColor="#444444"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginTop="35dp"/>
+
+
+                    <!-- PRINCIPAL -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="45dp">
+
+
+                        <!-- SIGNATURE SPACE -->
+
+                        <View
+                            android:layout_width="130dp"
+                            android:layout_height="35dp"/>
+
+
+                        <!-- PRINCIPAL NAME -->
+
+                        <TextView
+                            android:id="@+id/tvPrincipalName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Principal"
+                            android:textColor="#222222"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Principal"
+                            android:textColor="#666666"
+                            android:textSize="13sp"
+                            android:layout_marginTop="3dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- PRINT -->
+        <!-- ================================================= -->
+
+        <Button
+            android:id="@+id/btnPrint"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="PRINT / SAVE PDF"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#5B21B6"
+            android:layout_marginTop="20dp"/>
+
+
+        <!-- SHARE -->
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="SHARE CERTIFICATE"
+            android:textColor="#5B21B6"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#E9E0FF"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

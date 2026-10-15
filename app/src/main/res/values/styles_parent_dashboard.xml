@@ -1,0 +1,47 @@
+<resources>
+    <!--  =====================================================  -->
+    <!--  QUICK CARD  -->
+    <!--  =====================================================  -->
+    <style name="ParentQuickCard">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">82dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_parent_quick_card</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <!--  =====================================================  -->
+    <!--  QUICK ICON  -->
+    <!--  =====================================================  -->
+    <style name="ParentQuickIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+    <!--  =====================================================  -->
+    <!--  QUICK TEXT  -->
+    <!--  =====================================================  -->
+    <style name="ParentQuickText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--  =====================================================  -->
+    <!--  DRAWER ITEM  -->
+    <!--  =====================================================  -->
+    <style name="ParentDrawerItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:textColor">#303030</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

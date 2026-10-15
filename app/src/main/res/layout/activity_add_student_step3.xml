@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F6FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_revert"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Add Student"
+                android:textColor="#4B1FA8"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <Space
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Step 3 of 6"
+            android:textColor="#5B21B6"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Parent / Guardian Information"
+            android:textColor="#17102D"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <!-- FATHER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Father's Information"
+            android:textColor="#4B1FA8"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/etFatherName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Father's full name"
+            android:layout_marginTop="8dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etFatherMobile"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Father's mobile number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etFatherEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Father's email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etFatherOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Father's occupation"
+            android:inputType="textCapWords"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <!-- MOTHER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mother's Information"
+            android:textColor="#4B1FA8"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/etMotherName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Mother's full name"
+            android:layout_marginTop="8dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etMotherMobile"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Mother's mobile number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etMotherEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Mother's email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etMotherOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Mother's occupation"
+            android:inputType="textCapWords"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <!-- GUARDIAN -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardian Information"
+            android:textColor="#4B1FA8"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/etGuardianName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Guardian name (if applicable)"
+            android:layout_marginTop="8dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etGuardianRelation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Relationship"
+            android:inputType="textCapWords"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/etGuardianMobile"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Guardian mobile number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="NEXT  ›"
+            android:textSize="17sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#5B21B6"
+            android:layout_marginTop="25dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

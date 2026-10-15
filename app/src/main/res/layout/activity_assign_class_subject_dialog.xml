@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ================================================= -->
+        <!-- TITLE -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Assign Class &amp; Subject"
+
+            android:textColor="#17102D"
+            android:textSize="21sp"
+            android:textStyle="bold"
+
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Assign class or subject to a teacher"
+
+            android:textColor="#77727E"
+            android:textSize="12sp"
+
+            android:gravity="center"/>
+
+
+        <!-- ================================================= -->
+        <!-- TEACHER -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+
+            android:text="Teacher"
+
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerAssignTeacher"
+
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:layout_marginTop="6dp"
+
+            android:background="@drawable/bg_staff_input"/>
+
+
+        <!-- ================================================= -->
+        <!-- ASSIGNMENT TYPE -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:text="Assignment Type"
+
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rgAssignmentType"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAssignClass"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:text="Assign Class"
+
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/rbAssignSubject"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:text="Assign Subject"
+
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+        </RadioGroup>
+
+
+        <!-- ================================================= -->
+        <!-- ASSIGN CLASS -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:id="@+id/assignClassLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Select Class"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerAssignClass"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="6dp"
+
+                android:background="@drawable/bg_staff_input"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                android:text="Select Division"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerAssignDivision"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="6dp"
+
+                android:background="@drawable/bg_staff_input"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- ASSIGN SUBJECT -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:id="@+id/assignSubjectLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:orientation="vertical"
+
+            android:visibility="gone">
+
+            <!-- SUBJECT -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Select Subject"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etAssignSubject"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="6dp"
+
+                android:background="@drawable/bg_staff_input"
+
+                android:hint="Enter subject"
+
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+
+                android:singleLine="true"
+
+                android:inputType="textCapWords"
+
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="14sp"/>
+
+
+            <!-- CLASS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                android:text="Select Class"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerSubjectClass"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="6dp"
+
+                android:background="@drawable/bg_staff_input"/>
+
+
+            <!-- DIVISION -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                android:text="Select Division"
+
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerSubjectDivision"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_marginTop="6dp"
+
+                android:background="@drawable/bg_staff_input"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- BUTTONS -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="22dp"
+
+            android:orientation="horizontal"
+
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/btnCancelAssign"
+
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+
+                android:gravity="center"
+
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+
+                android:text="CANCEL"
+
+                android:textColor="#6B6175"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAssign"
+
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+
+                android:layout_marginStart="8dp"
+
+                android:text="ASSIGN"
+
+                android:textSize="13sp"
+                android:textStyle="bold"
+
+                app:cornerRadius="12dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
